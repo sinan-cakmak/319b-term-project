@@ -18,7 +18,7 @@ router.put("/addFriend/:userId", async (req, res) => {
     }
 
     if (user.friends.includes(friend._id)) {
-      return res.status(400).json({ message: "Friend already added" });
+      return res.status(200).json({ message: "Friend already added" });
     }
 
     user.friends.push(friend._id);
